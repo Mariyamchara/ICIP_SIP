@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kashmir </title>
+<style type="text/css">
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .parallax {
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  .parallax h2 {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="parallax" style="background-image: url('guljpg.jpg');">
+  <h2>Gulmarg</h2>
+</div>
+
+<div class="para">
+  <p>
+    Gulmarg is a town and hill station in the Baramulla district of Jammu and Kashmir, India. It is surrounded by fir, pine, and deodar forests and is located in the Pir Panjal Range in the northwestern Himalayas.
+  </p>
+</div>
+
+<div class="parallax" style="background-image: url('son.jpg');">
+  <h2>Sonamarg</h2>
+</div>
+
+<div class="para">
+  <p>
+    Sonamarg, known as the "meadow of gold" in Kashmiri, is a hill station located in the Ganderbal District of Jammu and Kashmir, India.
+  </p>
+</div>
+
+<div class="parallax" style="background-image: url('guljpg.jpg');">
+  <h2>Gulmarg</h2>
+</div>
+
+<script>
+  // Smooth scrolling when clicking on navigation links
+  document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    for (const link of navLinks) {
+      link.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      const offsetTop = document.querySelector(href).offsetTop;
+
+      scroll({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
